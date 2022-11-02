@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?Lang=ruby&amp;skin=default"></script>
+		<!--skin names:default, desert, sunburst, sons-of-obsidian, doxy-->
 	</head>
 	<body class="is-preload">
 
@@ -27,14 +29,100 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Helicopter Mechanic to Computers </h2>
+							<h2>Divers Score</h2>
 						</header>
-						<p>In 1999 I joined the Ohio National Guard and had an enjoyable career there in Aviation. I had a range of positions from fixing helicopters
-							to crewing on flights, and finally landing in Quality Control. It was in Quality Control where I developed a love for computers. My
-							role in QC had me working as a Network, Database, and System Administrator. While I had little experience in any of these roles, I loved
-							challenge.  
-						</p>
+						<p>This program asks a panel of (7) judges for (1) degree of difficulty score and 
+							each of their scores. The best and worst scores are removed from the list. The remaining 
+							are summed and multiplied by the difficulty and .6 to return a total score.  
+						</p><!--
+						<ul class="actions">
+							<li><a href="Jason Lindsey Resume.pdf" class="button">Learn More</a></li>
+						</ul>-->
 					</section>
+
+                    <section>
+                        <h5>diversScoreApp</h5>
+							<pre class="prettyprint"><code>
+#include <iostream>
+using namespace std;
+const int MAX_NUMBER_SCORES = 7;
+void fillArray(int a[], int size, int &numberUsed);
+void sort(int a[], int numberUsed);
+void swapValues(int& v1, int& v2);
+int indexOfSmallest(const int a[], int startIndex, int numberUsed);
+double difficulty = 0;
+double overall = 0;
+int main()
+{
+	cout << "Enter degree of difficulty:\n";
+	cin >> difficulty;
+
+	int score[MAX_NUMBER_SCORES],numberUsed;
+	cout << "Enter scores" << endl;
+	fillArray(score, MAX_NUMBER_SCORES, numberUsed);
+	sort(score, numberUsed);
+	
+	double total = 0;
+	for (int index = 1; index < numberUsed - 1; index++)
+
+		total = (total + score[index]);
+
+	
+
+	overall = (difficulty * total * .6);
+	cout << overall << endl;
+	system("Pause");
+		return 0;
+}
+void fillArray(int a[], int size, int& numberUsed)
+{
+	cout << "Enter up to " << size << " nonnegative whole numbers.\n"
+		 << "Mark the end of the list with a negative number.\n";
+	int next, index = 0;
+	cin >> next;
+	while ((next >= 0) && (index < size))
+	{
+		a[index] = next;
+		index++;
+		cin >> next;
+	}
+	numberUsed = index;	
+}
+void sort(int a[], int numberUsed)
+{
+	int indexOfNextSmallest;
+	for (int index = 0; index < numberUsed - 1; index++)
+	{//Place the correct value in a[index]:
+		indexOfNextSmallest =
+			indexOfSmallest(a, index, numberUsed);
+		swapValues(a[index], a[indexOfNextSmallest]);
+		//a[0] <= a[1] <=...<= a[index] are the smallest of the original array
+		//elements. The rest of the elements are in the remaining positions.
+	}
+}
+void swapValues(int& v1, int& v2)
+{
+	int temp;
+	temp = v1;
+	v1 = v2;
+	v2 = temp;
+}
+int indexOfSmallest(const int a[], int startIndex, int numberUsed)
+{
+	int min = a[startIndex],
+		indexOfMin = startIndex;
+	for(int index = startIndex + 1; index < numberUsed; index++)
+		if (a[index] < min)
+		{
+			min = a[index];
+			indexOfMin = index;
+			//min is the smallest of a[startIndex] through a[index]
+		}
+	return indexOfMin;
+}
+
+                            </code></pre>
+                    </section>
 
 				<!-- Two -->
 					<section id="two">
@@ -55,11 +143,11 @@
 								<h3>Excel</h3>
 								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 							</article>-->
-							<article class="col-6 col-12-xsmall">
-								<a href="cpp.html" class="image fit thumb"><img src="images/code.jpg" alt="" /></a>
+							<article class="col-6 col-12-xsmall"><!--
+								<a href="https://github.com/jlin2381/PortfolioProjects/blob/main/diverScore.cpp" class="image fit thumb"><img src="images/code.jpg" alt="" /></a>
 								<h3>C++</h3>
 								<p>A console app for scoring divers scores</p>
-							</article><!--
+							</article>--><!--
 							<article class="col-6 col-12-xsmall work-item">
 								<a href="images/coming.jpg" class="image fit thumb"><img src="images/coming.jpg" alt="" /></a>
 								<h3>.NET</h3>
@@ -70,35 +158,18 @@
 								<h3>Resume</h3>
 								<p>Interested? Check out my resume</p>
 							</article>
-						</div><!--
+						</div>
 						<ul class="actions">
-							<li><a href="https://github.com/jlin2381" class="button">Full Portfolio</a></li>
-						</ul>-->
-					</section>
-
-					<section>
-						<h2>People That Inspire Me</h2>
-						<iframe width="420" height="236" src="https://www.youtube.com/embed/Z2AachB309o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<li><a href="index.html" class="button">Home</a></li>
+						</ul>
 					</section>
 
 				<!-- Three -->
 					<section id="three">
-						<h2>Get In Touch</h2>
-						<!--
+						<h2>Get In Touch</h2><!--
 						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>-->
-						<div class="row"><!--
-							<div class="col-8 col-12-small">
-								<form method="post" action="mailto: jlinanalyst@gmail.com">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>-->
+						<div class="row">
+							
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
@@ -108,7 +179,7 @@
 									</li>
 									<li>
 										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:jlinanalyst@gmail.com">jlinanalyst@gmail.com</a>
+										<a action="mailto: jlinanalyst@gmail.com">jlinanalyst@gmail.com</a>
 									</li>
 								</ul>
 							</div>
@@ -122,7 +193,7 @@
 					<ul class="icons">
 						<li><a target="_blank" href="http://www.linkedin.com/in/jason-r-lindsey" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a target="_blank" href="https://github.com/jlin2381" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:jlinanalyst@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a target="_blank" href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 				</div>
 			</footer>
