@@ -1,105 +1,153 @@
-<?php 
-  $pageTitle = "Home | Portfolio";
-  include'includes/head.php';
-  include'includes/nav.php'; 
-?>
-  <body>
-    <div class="header">
-      <!-- SIDEBAR -->
-      <div class="side-nav">
-        <a href="#" class="logo">
-          <img class="rounded-circle logo-img" src="includes/pics/me_original.jpg" height=200px width=200px>
-        </a>
+<!DOCTYPE HTML>
 
-        <p style="color: #e2e9f7;">
-          Jason Lindsey Portfolio<br>
-          Student of Computer Science &<br>
-          Engineering | Database Administrator |<br>
-          System Administrator | Aviation<br>
-          Quality Control | Veteran    
-        </p>
+<html>
+	<head>
+		
+		<title>Jason Lindsey Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYSXTT47CG"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-        <a href="https://www.linkedin.com/in/jason-r-lindsey/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #e2e9f7;"></i></a>
-        <a href="https://github.com/jlin2381" target="_blank"><i class="fa-brands fa-github fa-lg" style="color: #e2e9f7;"></i></a>
-      </div>
+		  gtag('config', 'G-YYSXTT47CG');
+		</script>
+	<body class="is-preload">
 
-      <!-- MAIN CONTENT -->
-      <div class="main">
-        <div class="container">
-          <video id="background-video" autoplay loop muted>
-            <source src="includes/pics/code.mp4" type="video/mp4"></video>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/LIPic.jpg" alt="" /></a>
+					<h1><strong>Jason Lindsey Portfolio</strong><br />
+						Student of Computer Science & Engineering | Database Administrator | System Administrator 
+						| Aviation Quality Control | Veteran<br />
+					</h1>
+				</div>
+			</header>
 
-            <br><br><br><br><br><br>
-              <h1>Helicopter Mechanic to Computers</h1>
-              
-              <p>In 1999 I joined the Ohio National Guard and had an enjoyable career there in Aviation. 
-                  I had a range of positions from fixing helicopters to crewing on flights, and finally 
-                  landing in Quality Control. It was in Quality Control where I developed a love for computers. 
-                  My role in QC had me working as a Network, Database, and System Administrator. While I had 
-                  little experience in any of these roles, I loved the challenge.</p>
+		<!-- Main -->
+			<div id="main">
 
-                  <br><br><br><br><br>
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Helicopter Mechanic to Computers </h2>
+						</header>
+						<p>In 1999 I joined the Ohio National Guard and had an enjoyable career there in Aviation. I had a range of positions from fixing helicopters
+							to crewing on flights, and finally landing in Quality Control. It was in Quality Control where I developed a love for computers. My
+							role in QC had me working as a Network, Database, and System Administrator. While I had little experience in any of these roles, I loved
+							challenge.  
+						</p>
+					</section>
 
-              <div class="row">
-                <div class="col-sm-6">
-                  <a href="https://public.tableau.com/app/profile/jason.lindsey/viz/TableauTutorialCovid/Dashboard1" target="_blank" style="text-decoration: none; color: black;">
-                  <div class="card shadow-lg p-3 mb-5 bg-white rounded opacity-50">
-                    <div class="card-body">
-                      <h5 class="card-title">Data Visualization</h5>
-                    </div>
-                  </div></a>
-                </div>
-                <div class="col-sm-6">
-                  <a href="https://github.com/jlin2381/PortfolioProjects/blob/24a6746f30774eb591fde3792cc42020fd6f111d/CovidPortfolioSQLQuery4.sql" target="_blank" style="text-decoration: none; color: black;">
-                  <div class="card shadow-lg p-3 mb-5 bg-white rounded opacity-50">
-                    <div class="card-body">
-                      <h5 class="card-title">SQL</h5>
-                    </div>
-                  </div></a>
-                </div>
-              </div>  
+				<!-- Two -->
+					<section id="two">
+						<h2>Projects</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall">
+								<a href="https://public.tableau.com/views/TableauTutorialCovid/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link" class="image fit thumb"><img src="images/dataviz.jpg" alt="" /></a>
+								<h3>Data Visualization</h3>
+								<p>Covid-19</p>
+							</article>
+							<article class="col-6 col-12-xsmall">
+								<a href="https://github.com/jlin2381/PortfolioProjects/blob/24a6746f30774eb591fde3792cc42020fd6f111d/CovidPortfolioSQLQuery4.sql" class="image fit thumb"><img src="images/sql.jpg" alt="" /></a>
+								<h3>SQL</h3>
+								<p>SQL Query</p>
+							</article><!--
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/coming.jpg" class="image fit thumb"><img src="images/coming.jpg" alt="" /></a>
+								<h3>Excel</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>-->
+							<article class="col-6 col-12-xsmall">
+								<a href="cpp.html" class="image fit thumb"><img src="images/code.jpg" alt="" /></a>
+								<h3>C++</h3>
+								<p>A console app for scoring divers scores</p>
+							</article><!--
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/coming.jpg" class="image fit thumb"><img src="images/coming.jpg" alt="" /></a>
+								<h3>.NET</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>-->
+							<article class="col-6 col-12-xsmall">
+								<a target="_blank" href="JasonLindseyResume2023.pdf" class="image fit thumb"><img src="images/resumepic.jpg" alt="" /></a>
+								<h3>Resume</h3>
+								<p>Interested? Check out my resume</p>
+							</article>
+						</div><!--
+						<ul class="actions">
+							<li><a href="https://github.com/jlin2381" class="button">Full Portfolio</a></li>
+						</ul>-->
+					</section>
 
-              <div class="row">
-                <div class="col-sm-6">
-                  <a href="cpp.php" style="text-decoration: none; color: black;">
-                  <div class="card shadow-lg p-3 mb-5 bg-white rounded opacity-50">
-                    <div class="card-body">
-                      <h5 class="card-title">C++</h5>
-                    </div>
-                  </div></a>
-                </div>
-                <div class="col-sm-6">
-                  <a href="python.php" style="text-decoration: none; color: black;">
-                  <div class="card shadow-lg p-3 mb-5 bg-white rounded opacity-50">
-                    <div class="card-body">
-                      <h5 class="card-title">Python</h5>
-                    </div>
-                  </div></a>
-                </div>
-              </div> 
+					<section>
+						<div class="row">
+							<article class="col-6 col-12-xsmall">
+						<h2>Certifications</h2>
+						<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f1e12742-bdc1-4182-a29a-0150edb5d79f" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+					</article>
+					</div>
+					</section>
 
-              <div class="row">
-                <div class="col-sm-6">
-                  <a href="java.php" style="text-decoration: none; color: black;">
-                  <div class="card shadow-lg p-3 mb-5 bg-white rounded opacity-50">
-                    <div class="card-body">
-                      <h5 class="card-title">Java</h5>
-                    </div>
-                  </div></a>
-                </div>
-                <div class="col-sm-6">
-                  <a href="https://everbloomgroup.com/" target="_blank" style="text-decoration: none; color: black;">
-                  <div class="card shadow-lg p-3 mb-5 bg-white rounded opacity-50">
-                    <div class="card-body">
-                      <h5 class="card-title">Web Development</h5>
-                    </div>
-                  </div></a>
-                </div>
-              </div>      
-            </div>
-    </div>
-  </body>
+				<!-- Three -->
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<!--
+						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>-->
+						<div class="row"><!--
+							<div class="col-8 col-12-small">
+								<form method="post" action="mailto: jlinanalyst@gmail.com">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>-->
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+										Canton, OH 44708<br />
+										United States
+									</li>
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="mailto:jlinanalyst@gmail.com">jlinanalyst@gmail.com</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a target="_blank" href="http://www.linkedin.com/in/jason-r-lindsey" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a target="_blank" href="https://github.com/jlin2381" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:jlinanalyst@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
-
-            
-            
